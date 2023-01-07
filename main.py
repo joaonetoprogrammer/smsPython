@@ -7,8 +7,8 @@ import pandas as pd
 from twilio.rest import Client
 
 # TOKEN E SID CONT CADASTRADO NA PLATAFORMA DA TWILIO
-account_sid = "AC6acd0e299375d8f12e4ebdade8c3d965"
-auth_token = "51ae058a076ec1127c0890126c270535"
+account_sid = "SEU ID NA TWILIO"
+auth_token = "SEU TOKEN NA TWILIO"
 
 # CONECTANDO ID E TOKEN
 client = Client(account_sid, auth_token)
@@ -28,8 +28,8 @@ for mes in lista_meses:
         print(f'No Mês {mes} alguém bateu a meta. Vendedor: {vendedor}, Vendas: {vendas}')
         message = client.messages.create(
                      body="f'No Mês {mes} alguém bateu a meta. Vendedor: {vendedor}, Vendas: {vendas}'",
-                     from_="+14308085987",
-                     to="85986931429"
+                     from_="SEU NUMERO NA PALTAFORMA DA TWILIO",
+                     to="SEU NUMERO"
                  )
 
         print(message.sid)
